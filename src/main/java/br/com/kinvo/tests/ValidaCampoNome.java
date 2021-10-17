@@ -1,0 +1,25 @@
+package br.com.kinvo.tests;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import br.com.kinvo.page.ContaPage;
+import br.com.kinvo.utils.Utils;
+
+public class ValidaCampoNome extends Utils{
+	ContaPage conta = new ContaPage();
+
+	@Test
+	public void valida_Campo_Senha() {
+
+		conta.setInteragir_Com_Campo_Nome("K");
+		conta.setLimpar_Campo_Nome_Com_Backspace();
+		conta.setInteragir_Com_Campo_Email("kinvo@kinvo.com");
+		conta.setInteragir_Com_Campo_Confirmar_Email("kinvo@kinvo.com");
+		conta.setInteragir_Com_Campo_Senha("Kinvo@123");
+		
+		Assert.assertEquals("Por favor, digite seu nome", conta.getTextoErro("Por favor, digite seu nome"));
+		
+	}
+
+}
