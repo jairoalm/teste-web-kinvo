@@ -1,13 +1,13 @@
-package br.com.kinvo.tests;
+package br.com.kinvo.cadastro.tests;
 
 import org.junit.Assert;
 import org.junit.Test;
 import br.com.kinvo.utils.*;
 import br.com.kinvo.page.*;
 
-public class ContaTest extends Utils{
+public class CriarContaTest extends Utils{
 	
-	ContaPage conta = new ContaPage();
+	CriarContaPage conta = new CriarContaPage();
 
 	@Test
 	public void valida_Criar_Conta_Usuário(){
@@ -16,9 +16,6 @@ public class ContaTest extends Utils{
 		conta.setInteragir_Com_Campo_Confirmar_Email("kinvo@kinvo.com");
 		conta.setInteragir_Com_Campo_Senha("Kinvo@123");
 		conta.clicar_Recaptcha();	
-		
-		//Assert.assertEquals("Cadastro de DEVs", cadastro.getCapturarTexto());
-		
-		//System.out.println(cadastro.getCapturarTexto());		
+		//conta.botaoCriarConta();	
 	}	
 }

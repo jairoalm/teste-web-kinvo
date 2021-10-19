@@ -1,14 +1,14 @@
-package br.com.kinvo.tests;
+package br.com.kinvo.regraDeNegocio.tests;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import br.com.kinvo.page.ContaPage;
+import br.com.kinvo.page.CriarContaPage;
 import br.com.kinvo.utils.Utils;
 
-public class ValidarCampoSenha extends Utils{	
+public class ValidarCampoSenhaTest extends Utils{	
 
-	ContaPage conta = new ContaPage();
+	CriarContaPage conta = new CriarContaPage();
 
 	@Test
 	public void valida_Campo_Senha() {

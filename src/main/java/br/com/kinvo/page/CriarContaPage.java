@@ -6,8 +6,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.kinvo.utils.DriverFactory;
+import sun.security.provider.VerificationProvider;
 
-public class ContaPage extends BasePage {
+public class CriarContaPage extends BasePage {
 	
      public void setInteragir_Com_Campo_Nome(String texto) {
 		escrever(By.xpath("//input[@name='name']"), texto);
@@ -25,7 +26,7 @@ public class ContaPage extends BasePage {
 		escrever(By.xpath("//input[@name='password']"), texto);
 	}
 
-	@SuppressWarnings("deprecation")
+	
 	public void clicar_Recaptcha(){
 		JavascriptExecutor jse = (JavascriptExecutor)DriverFactory.getDriver();
 		jse.executeScript("window.scrollBy(0,250)", "");
@@ -35,12 +36,18 @@ public class ContaPage extends BasePage {
 				elementToBeClickable((By.xpath("//div[@class='recaptcha-checkbox-border']")))).click();
 		
 	}
+	
+	public void botaoCriarConta(){
+		clicar(By.xpath("//button[@type='submit']"));
+	}
 
 	public String getTextoErro(String valor) {
-		//return obterTextoBy(By.xpath("//span[text()='Por favor, digite seu nome']"));
-	    return obterTextoBy(By.xpath("//span[text()='" + valor + "']"));
-	}
+		return obterTextoBy(By.xpath("//span[text()='" + valor + "']"));
+	}	
 	
+	public String getTextoErroSenha(String valor) {
+		return obterTextoBy(By.xpath("//label[text()='" + valor + "']"));
+	}
 
 	public void setLimpar_Campo_Nome_Com_Backspace(){
 		backspace(By.xpath("//input[@name='name']"));

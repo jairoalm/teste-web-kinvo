@@ -41,5 +41,13 @@ public class DriverFactory {
 		}		
 		return driver;		
 	}
+	
+	//Finalizando o browser
+		public static void killDriver(){
+			if(driver != null){
+				driver.quit();
+				driver = null;
+			}		
+		}
 
 }
