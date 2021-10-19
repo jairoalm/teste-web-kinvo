@@ -5,8 +5,8 @@ import org.junit.Test;
 import br.com.kinvo.page.CriarContaPage;
 import br.com.kinvo.utils.Utils;
 
-public class ValidarComMenos8Caracteres extends Utils{
-	
+public class ValidarComMenos8Caracteres extends Utils {
+
 	CriarContaPage conta = new CriarContaPage();
 
 	@Test
@@ -18,5 +18,4 @@ public class ValidarComMenos8Caracteres extends Utils{
 
 		Assert.assertEquals("Mínimo de 8 caracteres", conta.getTextoErroSenha("Mínimo de 8 caracteres"));
 	}
-
 }

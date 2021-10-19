@@ -6,7 +6,7 @@ import org.junit.Test;
 import br.com.kinvo.page.CriarContaPage;
 import br.com.kinvo.utils.Utils;
 
-public class ValidarCampoSenhaTest extends Utils{	
+public class ValidarCampoSenhaTest extends Utils {
 
 	CriarContaPage conta = new CriarContaPage();
 
@@ -20,7 +20,7 @@ public class ValidarCampoSenhaTest extends Utils{
 		conta.setLimpar_Campo_Senha_Com_Backspace();
 
 		Assert.assertEquals("Por favor, digite sua senha.", conta.getTextoErro("Por favor, digite sua senha."));
-		
+
 	}
 
 }

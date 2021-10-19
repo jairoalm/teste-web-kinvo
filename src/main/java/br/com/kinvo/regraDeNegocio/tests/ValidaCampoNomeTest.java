@@ -6,7 +6,7 @@ import org.junit.Test;
 import br.com.kinvo.page.CriarContaPage;
 import br.com.kinvo.utils.Utils;
 
-public class ValidaCampoNomeTest extends Utils{
+public class ValidaCampoNomeTest extends Utils {
 	CriarContaPage conta = new CriarContaPage();
 
 	@Test
@@ -17,9 +17,9 @@ public class ValidaCampoNomeTest extends Utils{
 		conta.setInteragir_Com_Campo_Email("kinvo@kinvo.com");
 		conta.setInteragir_Com_Campo_Confirmar_Email("kinvo@kinvo.com");
 		conta.setInteragir_Com_Campo_Senha("Kinvo@123");
-		
+
 		Assert.assertEquals("Por favor, digite seu nome", conta.getTextoErro("Por favor, digite seu nome"));
-		
+
 	}
 
 }

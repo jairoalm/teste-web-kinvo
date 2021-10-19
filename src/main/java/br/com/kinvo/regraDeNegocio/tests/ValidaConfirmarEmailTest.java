@@ -6,7 +6,7 @@ import org.junit.Test;
 import br.com.kinvo.page.CriarContaPage;
 import br.com.kinvo.utils.Utils;
 
-public class ValidaConfirmarEmailTest extends Utils{
+public class ValidaConfirmarEmailTest extends Utils {
 
 	CriarContaPage conta = new CriarContaPage();
 
@@ -19,7 +19,7 @@ public class ValidaConfirmarEmailTest extends Utils{
 		conta.setInteragir_Com_Campo_Senha("Kinvo@123");
 
 		Assert.assertEquals("Este email não é válido", conta.getTextoErro("Este email não é válido"));
-		
+
 	}
 
 }

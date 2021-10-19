@@ -89,6 +89,6 @@ Na aplicação frontend de acordo com as boas práticas de desenvolvemento os eleme
 
 #Autor(a) (QA) Jairo Almeida
 
-#Nota No GIT contém o projeto
+#No GIT contém o projeto
 
 [Git - Mapa Mental] https://github.com/mentorisapinheiro/Mapa-mental-Amazon [Git - Projeto Automação] https://github.com/mentorisapinheiro/web-front-zup

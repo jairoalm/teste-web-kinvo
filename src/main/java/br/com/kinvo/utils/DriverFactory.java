@@ -5,20 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.safari.SafariDriver;
+
 
 public class DriverFactory {
-	
+
 	private static WebDriver driver;
-	
-	public DriverFactory(){		
+
+	public DriverFactory() {
 	}
-	
-	public static WebDriver getDriver(){
-		
-		if (driver == null){
-			switch (Propriedade.browser){
+
+	public static WebDriver getDriver() {
+
+		if (driver == null) {
+			switch (Propriedade.browser) {
 			case CHROME:
 				driver = new ChromeDriver();
 				break;
@@ -27,27 +26,19 @@ public class DriverFactory {
 				break;
 			case IE:
 				driver = new InternetExplorerDriver();
-				break;
-			case SAFARI:
-				driver = new SafariDriver();
-				break;
-			case OPERA:
-				driver = new OperaDriver();	    
 			}
-						
-			//driver = new ChromeDriver();
+
 			driver.manage().window().maximize();
 			DriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		}		
-		return driver;		
-	}
-	
-	//Finalizando o browser
-		public static void killDriver(){
-			if(driver != null){
-				driver.quit();
-				driver = null;
-			}		
 		}
+		return driver;
+	}
 
+	// Finalizando o browser
+	public static void killDriver() {
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+		}
+	}
 }
