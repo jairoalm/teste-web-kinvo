@@ -91,4 +91,4 @@ Na aplicação frontend de acordo com as boas práticas de desenvolvemento os eleme
 
 #No GIT contém o projeto
 
-[Git - Mapa Mental] https://github.com/mentorisapinheiro/Mapa-mental-Amazon [Git - Projeto Automação] https://github.com/mentorisapinheiro/web-front-zup
+[Git - Projeto Automação] https://github.com/jairoalm/teste-web-kinvo
